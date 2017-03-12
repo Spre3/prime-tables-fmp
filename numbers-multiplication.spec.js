@@ -45,6 +45,11 @@
             ]);
         });
 
+            var result = numbersMult.calculate([2, 3, 5, 7, 11, 13]);
+            expect(result[1][3]).toEqual(result[3][1]);
+            expect(result[2][4]).toEqual(result[4][2]);
+            expect(result[3][5]).toEqual(result[5][3]);
+        });
 
     });
 });
