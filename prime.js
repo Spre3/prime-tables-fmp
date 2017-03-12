@@ -1,7 +1,7 @@
-﻿var PrimeTables = function () {
+﻿var Prime = function () {
 };
 
-PrimeTables.prototype.getPrimes = function (numberOfPrimes) {
+Prime.prototype.getPrimes = function (numberOfPrimes) {
     if (numberOfPrimes < 1) return null;
 
     var primes = [2];
@@ -14,7 +14,7 @@ PrimeTables.prototype.getPrimes = function (numberOfPrimes) {
     return primes;
 };
 
-PrimeTables.prototype.isPrime = function(number) {
+Prime.prototype.isPrime = function(number) {
     for (var i = 3; i <= Math.sqrt(number); i+= 2) {
         if (number % i === 0)
             return false;
