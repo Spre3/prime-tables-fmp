@@ -9,13 +9,13 @@ PrimeTables.prototype.getPrimes = function (numberOfPrimes) {
     while (primes.length < numberOfPrimes) {
         if (this.isPrime(number))
             primes.push(number);
-        number++;
+        number += 2;
     }
     return primes;
 };
 
 PrimeTables.prototype.isPrime = function(number) {
-    for (var i = 2; i < number; i++) {
+    for (var i = 3; i <= Math.sqrt(number); i+= 2) {
         if (number % i === 0)
             return false;
     }
